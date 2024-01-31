@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral|Rubik');
+
+* {
+    font-family: Rubik, sans-serif;
+    font-size: 18px;
+    box-sizing: border-box; 
+    margin:0;
+    transition: all .2s ease;
+    outline:none; border:none;
+
+    
+}
+
+html{
+    background-color: #fff2e6;
+    overflow-x: hidden;
+}
+
+.header {
+    position:sticky;
+    top:0; left:0; right:0;
+    height:3rem;
+    z-index:1000;
+    background-color: #4d2600;
+    /* box-shadow: 0 .5rem 1rem #4d2500; */
+    display:flex;
+    align-items:center;
+    padding: 0 9%;
+
+    .logo {
+        font-size:1.2rem;
+        font-weight:bolder;
+        margin-right: auto;
+
+    }
+
+    .navbar{
+        
+        ul{
+            list-style: none;
+
+            li{
+                position: relative;
+                float: left;
+
+                &:hover ul{
+                    display: block;
+                }
+
+                a{
+                   font-size: 1rem;
+                   color:#fff2e6;
+                   padding:0.7rem;
+                   display:block;
+
+                    &:hover{
+                        transform:scale(1.2) translateX(8px);
+                    }
+                }
+
+                ul{
+                    position: absolute;
+                    left: 0;
+                    width:20rem;
+                    display: none;
+                    background-color: #4d2600;
+
+                    li{
+                        width:100%;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .icons div, .icons a{
+        font-size: 1.2rem;
+        color:#fff2e6;
+        cursor:pointer;
+        margin-right:0.5rem;
+
+        &:hover{
+           transform:scale(1.2) translateX(8px); 
+        }   
+    }
+    
+    #menu-btn{
+        display:none;
+    }
+}
+  
+.topPage{
+    background-image: url('../img/coffee\ beans.png');
+    background-size: 100%;
+    padding:0px;
+    text-align:center;
+
+    h1, h2 {
+        color:bisque;
+        text-shadow:2px 2px 5px black;
+    }
+
+    h1 {
+        font-family: Spectral, serif;
+        font-size:4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        text-align:left;
+        padding-left: 10%;
+    }
+}
+
+.content{
+    display:block;
+    flex-wrap: wrap;
+    width:80%;
+    margin-left:8%;
+
+    .search-form{
+        background: #fff2e6;
+        display: flex;
+        align-items: center;
+        margin: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        &.active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        input{
+            width:25rem;
+            height:1.7rem;
+            font-size: 1rem;
+            color:#4d2500;
+            text-transform: none;
+        }
+
+        label{
+            font-size:1.5rem;
+            color:#4d2600;
+            cursor:pointer;
+        }
+    }
+
+    .main-content{
+        width: 100%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    #registration_form {
+        margin:1rem;
+        padding:2rem;
+        width:28rem;
+        border:solid 2px #4d2600;
+        background-color: antiquewhite;
+
+        h4{
+            text-align: center;
+            /* margin-top: 0.5rem;
+            margin-bottom: 2rem; */
+        }
+
+        input {
+        margin:0.5rem;
+        width:23rem;
+        height:2rem;
+        }
+
+        #submit_button{
+            text-decoration: underline;
+            background-color: antiquewhite;
+            border:none;
+            &:hover{
+                cursor:pointer;
+                transform:scale(1.1) translateX(4px);       
+            }
+        }
+    }
+
+    button{
+        background-color: #fff2e6;
+        box-shadow: 0 0.1rem 6px 0;
+        color: #4d2600;
+        height: 2.5rem;
+        border-radius: 1rem;
+        cursor:pointer;
+        border:solid 1px #4d2600;
+        margin: 1rem;
+
+        &:hover{
+            background-color: antiquewhite;        
+        }
+    }
+
+
+    .img-roast-beans{
+        float:left;
+        width:25rem;
+        margin: 1rem;  
+    }
+    .woman-cofee{
+        float:right;
+        width:25rem;
+        margin: 1rem;        
+    }
+
+    p{
+        margin:0.7rem;
+    }
+
+    h4{
+        margin:0.9rem;
+    }
+
+    h5 {
+        margin:0.8rem;
+    }
+
+    h3, h4, h5 {
+        color: #4d2500;
+    }
+
+    span {
+        color: #4d2500;
+        font-weight: bolder;
+    }
+
+    table{
+        width: 75%;
+        margin-left: 12rem;
+
+        /* margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 10%;
+        margin-left: 15%; */
+    }
+
+    table, th, td {
+        padding: 0.7rem;
+        border:solid 0.1rem #4d2500;
+        border-collapse: collapse;
+    }
+
+
+    ul {
+        list-style-type: circle;
+    }
+
+    ul.cofee_ul {
+        list-style-position: outside;
+        list-style-image: url('../img/bean.png');
+    }
+
+    ul.tea_ul {
+        list-style-position: outside;
+        list-style-image: url('../img/tealeaf.png');
+    }
+
+    #more{
+        display:none;
+    }
+
+    #btnReadMore{
+        background-color: #fff2e6;
+        color:#4d2600;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        text-align: center;
+        text-decoration: underline;
+        /* display: inline-block; */
+        /* font-size: 1.8rem; */
+        margin: 0 0 3rem 0;
+        cursor:pointer;
+        &:hover{
+            transform:scale(1.2) translateX(8px);
+        } 
+    }
+
+}
+
+
+
+
+.footer .box_container{
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 0.5fr; 
+
+    grid-template-areas: "contact shop user" "author author author";
+
+    .contact_box, .shop_box, .user_box, .author{
+        background-color: #4d2500;
+        color:#fff2e6;
+        text-align: center;
+        padding:1rem;
+
+        h3{
+            font-size:0.8rem;
+        }
+        a{
+            padding:1rem;
+            color:white;
+            font-size:0.9rem;
+        }
+    }
+
+    .contact_box{
+        grid-area: contact;
+    }
+    .shop_box{
+        grid-area: shop;
+    }
+    .user_box{
+        grid-area: user;
+    }
+
+    .author{
+        grid-area: author;
+        font-size: 0.6rem;
+        span{
+            font-size: 0.7rem;
+        }
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1056px) {
+    .content table{
+        margin-left:0rem;
+        width:95%;
+    }
+    
+}
+
+@media screen and (max-width:798px) {
+    * {
+        font-size: 0.9rem;
+    }
+    .header{
+        padding: 0 1rem;
+    }
+    
+}
+
+
+@media screen and (max-width:560px) {
+    .header{
+        padding: 0 1rem;
+
+        .navbar{
+            position: absolute;
+            top:99%; left: 0; right: 0;
+            background: #4d2500;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            ul li{
+                width:100%;
+
+                ul{
+                    position: relative;
+                    width: 100%;
+
+                    li a {
+                        padding-left: 2rem;
+                    }
+                }
+            }            
+        }
+        #menu-btn{
+            display:inline-block;
+        }
+    }
+
+    .content{
+        display:block;
+        flex-wrap: wrap;
+        width:98%;
+        margin-left:0.3rem;
+
+        .search-form{
+            background: #fff2e6;
+            display: flex;
+            margin: 1rem;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            input{
+                margin-left: 5%;
+                width:70%;
+            }
+
+            label{
+                font-size:1rem;
+            }
+        }
+
+        .main-content{
+            width: 100%;
+        }
+
+    #registration_form {
+        margin-left:3.5rem;
+        margin-top: 2rem;
+        padding:1rem;
+        width: fit-content;
+    }
+
+    button{  
+        height: 2rem;
+    }
+
+
+    .img-roast-beans, .woman-cofee{
+        float:none;
+        width:80%;
+        margin-left: 8%;  
+    }
+    
+
+    p{
+        margin:0.7rem;
+    }
+
+    h4{
+        margin:0.9rem;
+    }
+
+    h5 {
+        margin:0.8rem;
+    }
+
+    h3, h4, h5 {
+        color: #4d2500;
+    }
+
+    span {
+        color: #4d2500;
+        font-weight: bolder;
+    }
+
+    table{
+        width: 96%;
+        margin-left: 1rem;
+
+        /* margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 10%;
+        margin-left: 15%; */
+    }
+
+    table, th, td {
+        padding: 0.7rem;
+        border:solid 0.1rem #4d2500;
+        border-collapse: collapse;
+    }
+
+
+    ul {
+        list-style-type: circle;
+    }
+
+    ul.cofee_ul {
+        list-style-position: outside;
+        list-style-image: url('../img/bean.png');
+    }
+
+    ul.tea_ul {
+        list-style-position: outside;
+        list-style-image: url('../img/tealeaf.png');
+    }
+
+    #more{
+        display:none;
+    }
+
+    #btnReadMore{
+        background-color: #fff2e6;
+        color:#4d2600;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        text-align: center;
+        text-decoration: underline;
+        /* display: inline-block; */
+        /* font-size: 1.8rem; */
+        margin: 0 0 3rem 0;
+        cursor:pointer;
+        &:hover{
+            transform:scale(1.2) translateX(8px);
+        } 
+    }
+    }
+} 
