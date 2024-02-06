@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог чаю</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/filterScript.js" defer></script>
+
+
+
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="logo">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../coffee-product/coffee.html">Кава</a></li>
+                <li><a href="../tea-product/tea.html">Чай</a></li>
+
+                <li><a href="../blog.html">Блог</a></li>
+                <li><a href="../contact.html">Контакти</a></li>
+
+                <li><a href="#">Аккаунт</a>
+                    <ul>
+                        <li><a href="../login.html">Увійти</a></li>
+                        <li><a href="../register.html">Реєстрація</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <a href="cart.html" class="fas fa-shopping-cart"></a>
+            <div id="search-btn" class="fas fa-search"></div>
+        </div>
+
+        
+
+    </header>    
+
+    <div class="topPage">
+        <h1>Coffee Shop</h1><br>
+        <h2>Наша кава - Ваші добрі ранки</h2><br>
+    </div>
+
+
+    <div id="btnContainer">
+        <span>Фільтр:</span>
+        <button class="btnFilter active" onclick="filterSelection('all')"> показати всі</button>
+        <button class="btnFilter" onclick="filterSelection('black')"> чорний</button>
+        <button class="btnFilter" onclick="filterSelection('green')"> зелений</button>
+        <button class="btnFilter" onclick="filterSelection('white')"> білий</button>
+        <button class="btnFilter" onclick="filterSelection('aroma')"> ароматизований</button>
+        <button class="btnFilter" onclick="filterSelection('herbal')"> трав'яний</button>
+        <button class="btnFilter" onclick="filterSelection('fruit')"> фруктовий</button>
+
+    </div>
+
+
+    <main class="teaProd">
+        <div class="box black">
+            <img src="tea-img/tea-black1.png" alt="Чай чорний">
+            <h3>Чай чорний</h3>
+            <div class="price"><span>425.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box black">
+            <img src="tea-img/tea-black2.png" alt="Чай чорний з бергамотом">
+            <h3>Чай чорний з бергамотом</h3>
+            <div class="price"><span>425.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box green">
+            <img src="tea-img/tea-green-classic.png" alt="Зелений класичний чай">
+            <h3>Зелений класичний чай</h3>
+            <div class="price"><span>455.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box green">
+            <img src="tea-img/tea-green-sencha-asagiri.png" alt="Чай зелений Sencha Asagiri">
+            <h3>Чай зелений Sencha Asagiri</h3>
+            <div class="price"><span>455.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box white">
+            <img src="tea-img/tea-w-silver-needle.png" alt="Чай зелений Silver Needle">
+            <h3>Чай зелений Silver Needle</h3>
+            <div class="price"><span>459.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box white">
+            <img src="tea-img/tea-w-chelsea-garden.png" alt="Чай зелений Сhelsea garden">
+            <h3>Чай зелений Сhelsea garden</h3>
+            <div class="price"><span>459.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box black fruit">
+            <img src="tea-img/tea-berry-elixir.png" alt="Чай фруктовий Berry Elixir">
+            <h3>Чай фруктовий Berry Elixir</h3>
+            <div class="price"><span>449.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box black fruit">
+            <img src="tea-img/tea-happy-chai(fruit).png" alt="Чай фруктовий Happy Chai">
+            <h3>Чай фруктовий Happy Chai</h3>
+            <div class="price"><span>449.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box herbal aroma">
+            <img src="tea-img/tea-herbal-rainforest.png" alt="Чай трав'яний Rainforest">
+            <h3>Чай трав'яний Rainforest</h3>
+            <div class="price"><span>420.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box herbal">
+            <img src="tea-img/tea-herbal-organic-peppermint.png" alt="Чай органічний Перцева м'ята">
+            <h3>Чай органічний Перцева м'ята</h3>
+            <div class="price"><span>420.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box green aroma">
+            <img src="tea-img/tea-aroma-mango-bergamot.png" alt="Чай зелений ароматизований Манго-Бергамот">
+            <h3>Чай ароматизований Манго-Бергамот</h3>
+            <div class="price"><span>440.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        
+    </main>
+
+
+
+
+    <footer class="footer">
+        <div class="box_container">
+
+            <div class="contact_box">
+                <h3>Контакти</h3>
+                <p>Телефон: +380961234567</p>
+                <p>м. Київ, вул Берестейська, 31Ф</p>
+            </div>
+
+            <div class="shop_box">
+                <h3>Магазин</h3>
+                <a href="../coffee-product/coffee.html">Кава</a>
+                <a href="tea.html">Чай</a>
+            </div>
+
+            <div class="user_box">
+                <h3>Користувачу</h3>
+                <a href="../login.html">Увійти</a>
+                <a href="../register.html">Реєстрація</a>
+            </div>
+
+            <div class="author"> created by <span>Yuliia Kushnir</span></div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

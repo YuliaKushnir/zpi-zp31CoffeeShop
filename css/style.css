@@ -4,15 +4,18 @@
     font-family: Rubik, sans-serif;
     font-size: 18px;
     box-sizing: border-box; 
-    margin:0;
+    margin:0; 
+    padding:0;
     transition: all .2s ease;
     outline:none; border:none;    
 }
 
 html{
     background-color: #fff2e6;
-    overflow-x: hidden;
+    overflow-x: clip;
+    min-width: 320px;
 }
+
 
 .header {
     position:sticky;
@@ -55,7 +58,7 @@ html{
                    display:block;
 
                     &:hover{
-                        transform:scale(1.2) translateX(8px);
+                        transform:scale(1.1) translateX(2px);
                     }
                 }
 
@@ -65,9 +68,11 @@ html{
                     width:20rem;
                     display: none;
                     background-color: #4d2600;
+                    transform:scale(1.1) translateX(2px);
 
                     li{
                         width:100%;
+                        font-size: 0.8rem;
                     }
                 }
             }
@@ -151,7 +156,6 @@ html{
         display: inline-flex;
         flex-wrap: wrap;
         justify-content: space-between;
-
     }
 
     #registration_form {
@@ -181,6 +185,10 @@ html{
                 cursor:pointer;
                 transform:scale(1.1) translateX(4px);       
             }
+        }
+        a{
+            color: black;
+            padding:40%;
         }
     }
 
@@ -244,10 +252,10 @@ html{
         width: 75%;
         margin-left: 12rem;
 
-        /* margin-top: 2rem;
+        margin-top: 2rem;
         margin-bottom: 2rem;
         margin-right: 10%;
-        margin-left: 15%; */
+        margin-left: 15%;
     }
 
     table, th, td {
@@ -283,8 +291,6 @@ html{
         padding: 0;
         text-align: center;
         text-decoration: underline;
-        /* display: inline-block; */
-        /* font-size: 1.8rem; */
         margin: 0 0 3rem 0;
         cursor:pointer;
         &:hover{
@@ -334,14 +340,244 @@ html{
     .author{
         grid-area: author;
         font-size: 0.6rem;
+
         span{
             font-size: 0.7rem;
         }
     }
-
-    
 }
 
+#btnContainer {
+    padding: 3rem 3rem 0;
+    span{
+        font-weight:bolder;
+        color:#4d2600;
+    }
+
+    .btnFilter{
+        margin:0.7rem;
+        background-color: #fff2e6;
+        color: #535251;
+        text-decoration: underline;
+        cursor:pointer;
+
+        &.active{
+            color: #4d2500;
+            font-weight: 700;
+        }
+    }
+}
+
+
+
+
+/* coffee grid====================================================== */
+.coffeeProd, .teaProd {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    .box{
+        margin-top:1rem;
+        margin-bottom:1rem;
+
+        padding:0.5rem;
+
+        text-align:center;
+
+        width:19rem;
+        height:27rem;
+        background-color: white;
+
+        img{
+            width:auto;
+            height:20rem;
+        }
+        .quantity{
+            padding: 0.4rem;
+            color:#535251;
+
+            input{
+                color:#535251;
+                border: 1px solid black;
+            }
+        }
+        .btn{
+            padding:0.25rem;
+            border-radius:5px;
+            text-decoration: none;
+            color:#4d2500;
+
+            &:hover{
+                background-color: #4d2500;
+                color:#fff2e6;
+            } 
+        }
+
+        display: none;
+    }
+
+    .show {
+        display: grid;
+    }
+}
+
+
+
+
+
+/* blog  ========================================== */
+.blog{
+    width:80%;
+    padding-left:8rem;
+
+    h2{
+        font-size: 1.4rem;
+        margin:1rem;
+        padding-top:1rem;
+    } 
+    
+    h3{
+        font-size: 1.2rem;
+        margin:1.2rem 3rem 0.6rem;
+    }
+    
+    p{
+        padding-top:0.9rem;
+        font-size: 1.1rem;
+    }
+
+    #more1, #more2, #more3, #more4, #more5 {
+        display:none;
+    }
+    
+    #readMoreBtn1, #readMoreBtn2, #readMoreBtn3, #readMoreBtn4, #readMoreBtn5{
+        background-color: #fff2e6;
+        color:#535251;
+        font-size:1rem;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        text-align: center;
+        text-decoration: underline;
+        margin: 0.4rem 0 2rem 1rem;
+        cursor:pointer;
+        &:hover{
+            transform:scale(1.1) translateX(4px);
+        } 
+    }    
+}
+
+
+
+/* contact  ========================================== */
+.contact-page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:2rem;
+
+    h2, h3{
+        color:#4d2600;
+    }
+
+    h2{
+        padding:2rem 0 0.5rem 1rem;
+        font-size:1.6rem;
+    }
+    h3{
+        padding:1rem 0.75rem 1rem 0;
+        font-size:1.2rem;
+    }
+
+    .contacts{
+        margin-left:2rem;
+        p{
+            padding-bottom:1.5rem;
+        }
+    }
+
+    .map{
+        width:50%;        
+    } 
+    iframe{
+        width:100%;
+        height:80%;
+    }
+}
+
+
+.login-form, .register-form{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding-bottom: 4rem;
+
+    h2, h3{
+        padding:1rem;
+        color:#4d2600;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+
+    form{
+        width:32rem;
+        height:15rem;
+        border: 1px solid black;
+        border-radius: 5px;
+
+        span{
+            padding-left: 2.5rem;
+        }
+        input {
+            margin:0.5rem;
+            width:24rem;
+            height:2rem;
+        }   
+    }
+
+    .btn { 
+        padding: 0.5rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: #4d2600;
+        color:#fff2e6;
+        width: 9rem; height:2rem;
+        border:none;
+        border-radius: 5px;
+        
+        &:hover{
+            background-color: #2f261e;
+            cursor:pointer;
+            transform:scale(1.1) translateX(4px);       
+        }  
+    }
+
+    #strangebtn{
+        margin-left:36%;
+    }
+}
+
+.login-form{
+    form{
+        span{
+            padding-top:2rem;
+        } 
+        #strangebtn{
+            margin-top:3.5rem;
+        } 
+    }
+}
+
+
+.cart{
+    height: 21rem;
+    h3{
+        margin:2rem;
+    }
+}
 
 
 
@@ -358,21 +594,29 @@ html{
         margin-left:0rem;
         width:95%;
     }
-    
+
+    .coffeeProd, .teaProd {
+        grid-template-columns: repeat(2, 1fr);
+        
+        .box{
+            width:20rem;
+            height:25rem;
+
+            img{
+                width:auto;
+                height:15rem;
+            }
+        }
+    }
 }
 
-@media screen and (max-width:798px) {
+
+
+@media screen and (max-width:767.98px) {
     * {
         font-size: 0.9rem;
     }
-    .header{
-        padding: 0 1rem;
-    }
-    
-}
 
-
-@media screen and (max-width:560px) {
     .header{
         padding: 0 1rem;
 
@@ -389,6 +633,12 @@ html{
             ul li{
                 width:100%;
 
+                a{
+                    &:hover{
+                        transform:none;
+                    }
+                }
+
                 ul{
                     position: relative;
                     width: 100%;
@@ -399,32 +649,27 @@ html{
                 }
             }            
         }
+
+        .icons div, .icons a{
+            font-size: 1rem;
+            margin-right:1rem;
+    
+            &:hover{
+               transform:none;
+            }   
+        }
+
         #menu-btn{
             display:inline-block;
         }
     }
 
     .content{
-        display:block;
-        flex-wrap: wrap;
-        width:98%;
-        margin-left:0.3rem;
+        margin-left: 2rem;
 
         .search-form{
-            background: #fff2e6;
-            display: flex;
             margin: 1rem;
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-
-            &.active{
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            }
-
-            input{
-                margin-left: 5%;
-                width:70%;
-            }
-
             label{
                 font-size:1rem;
             }
@@ -434,95 +679,83 @@ html{
             width: 100%;
         }
 
-    #registration_form {
-        margin-left:3.5rem;
-        margin-top: 2rem;
-        padding:1rem;
-        width: fit-content;
+        #registration_form {
+            margin-left:0.3rem;
+            margin-top: 1.5rem;
+            padding:1rem;
+            width: fit-content;
+        }
+
+        button{  
+            height: 2rem;
+        }
+
+        .img-roast-beans, .woman-cofee{
+            float:none;
+            width:80%;
+            margin-left: 8%;  
+        }
+
+        p{
+            margin:0.7rem;
+        }
+
+        h3, h4, h5 {
+            margin:0.9rem;
+        }
+
+        table{
+            width: 99%;
+            margin: 0.5rem;
+        }
+
+        table, th, td {
+            padding: 0.2rem;
+        }
+
+        ul {
+            list-style-type: circle;
+        }
+
+        ul.cofee_ul, ul.tea_ul {
+            list-style-position: inside;
+            list-style:circle;
+        }
+
+        #more{
+            display:none;
+        }
+
+        #btnReadMore{
+            padding: 2rem;        
+        }
     }
 
-    button{  
-        height: 2rem;
-    }
-
-
-    .img-roast-beans, .woman-cofee{
-        float:none;
-        width:80%;
-        margin-left: 8%;  
-    }
+    .blog{
+        width:92%;
+        padding-left:1rem;
     
-
-    p{
-        margin:0.7rem;
-    }
-
-    h4{
-        margin:0.9rem;
-    }
-
-    h5 {
-        margin:0.8rem;
-    }
-
-    h3, h4, h5 {
-        color: #4d2500;
-    }
-
-    span {
-        color: #4d2500;
-        font-weight: bolder;
-    }
-
-    table{
-        width: 96%;
-        margin-left: 1rem;
-    }
-
-    table, th, td {
-        padding: 0.7rem;
-        border:solid 0.1rem #4d2500;
-        border-collapse: collapse;
-    }
-
-
-    ul {
-        list-style-type: circle;
-    }
-
-    ul.cofee_ul {
-        list-style-position: outside;
-        list-style-image: url('../img/bean.png');
-    }
-
-    ul.tea_ul {
-        list-style-position: outside;
-        list-style-image: url('../img/tealeaf.png');
-    }
-
-    #more{
-        display:none;
-    }
-
-    #btnReadMore{
-        background-color: #fff2e6;
-        color:#4d2600;
-        box-shadow: none;
-        border: none;
-        padding: 0;
-        text-align: center;
-        text-decoration: underline;
-        margin: 0 0 3rem 0;
-        cursor:pointer;
-        &:hover{
-            transform:scale(1.2) translateX(8px);
+        h2{
+            font-size: 1.2rem;
         } 
+        
+        h3{
+            font-size: 1.1rem;
+        }
+        
+        p{
+            font-size: 1rem;
+        }  
     }
+
+    .coffeeProd, .teaProd {
+        justify-items: center;
+        grid-template-columns: 1fr;
     }
 } 
 
 
-@media screen and (max-width:45px) {
+@media screen and (max-width:450px) {
     .content{
         display:block;
         flex-wrap: wrap;

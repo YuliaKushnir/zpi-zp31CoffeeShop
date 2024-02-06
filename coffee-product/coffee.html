@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог кави</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/filterScript.js" defer></script>
+
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="logo">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../coffee-product/coffee.html">Кава</a></li>
+                <li><a href="../tea-product/tea.html">Чай</a></li>
+
+                <li><a href="../blog.html">Блог</a></li>
+                <li><a href="../contact.html">Контакти</a></li>
+
+                <li><a href="#">Аккаунт</a>
+                    <ul>
+                        <li><a href="../login.html">Увійти</a></li>
+                        <li><a href="../register.html">Реєстрація</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <a href="cart.html" class="fas fa-shopping-cart"></a>
+            <div id="search-btn" class="fas fa-search"></div>
+        </div>
+    </header>    
+
+    <div class="topPage">
+        <h1>Coffee Shop</h1><br>
+        <h2>Наша кава - Ваші добрі ранки</h2><br>
+    </div>
+
+    <div id="btnContainer">
+        <span>Фільтр:</span>
+        <button class="btnFilter active" onclick="filterSelection('all')"> показати всі</button>
+        <button class="btnFilter" onclick="filterSelection('beans')"> зерна</button>
+        <button class="btnFilter" onclick="filterSelection('blend')"> крафтова суміш</button>
+        <button class="btnFilter" onclick="filterSelection('decaf')"> без кофеїну</button>
+        <button class="btnFilter" onclick="filterSelection('aroma')"> ароматизована</button>
+    </div>
+
+    <div class="coffeeProd"> 
+        <div class="box aroma">
+            <img src="coffee-img/aroma-hazelnut.png" alt="Кава горіх">
+            <h3>Кава зі смаком горіха</h3>
+            <div class="price"><span>399.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+        
+        <div class="box aroma">
+            <img src="coffee-img/aroma-salted-caramel.png" alt="Кава солона карамель">
+            <h3>Кава зі смаком солоної карамелі</h3>
+            <div class="price"><span>399.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box aroma">
+            <img src="coffee-img/aroma-vanilla.png" alt="Кава ваніль">
+            <h3>Кава зі смаком ванілі</h3>
+            <div class="price"><span>399.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box blend">
+            <img src="coffee-img/santos-java.png" alt="Кава santos java">
+            <h3>Сантос Ява</h3>
+            <div class="price"><span>449.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box blend">
+            <img src="coffee-img/guatemala.png" alt="Кава guatemala">
+            <h3>Гватемала</h3>
+            <div class="price"><span>449.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box blend">
+            <img src="coffee-img/san agustin.png" alt="san agustin">
+            <h3>Сан Агустін</h3>
+            <div class="price"><span>499.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box aroma decaf">
+            <img src="coffee-img/decaf-mountain.png" alt="Кава без кофеїну">
+            <h3>Кава без кофеїну Mountain water</h3>
+            <div class="price"><span>325.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box beans">
+            <img src="coffee-img/beans-burbon-espresso.png" alt="Кава burbon-espresso">
+            <h3>Кава в зернах Burbon espresso</h3>
+            <div class="price"><span>625.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box bland beans">
+            <img src="coffee-img/breakfast-bland.png" alt="Кава breakfast bland">
+            <h3>Breakfast bland</h3>
+            <div class="price"><span>399.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box beans">
+            <img src="coffee-img/beans-.png" alt="Кава">
+            <h3>Кава в зернах Ethiopia Yirgacheffe</h3>
+            <div class="price"><span>625.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+        <div class="box beans aroma">
+            <img src="coffee-img/cafe-francais.png" alt="Кава french cafe">
+            <h3>Кава в зернах Французька кав'ярня</h3>
+            <div class="price"><span>720.00</span></div>
+            <div class="quantity">
+                <span>кількість:</span>
+                <input type="number" min="1" max="100" value="1">
+            </div>
+            <a href="#" class="btn">Додати до кошика</a>
+        </div>
+
+    </div>
+
+
+
+
+    
+    <footer class="footer">
+        <div class="box_container">
+
+            <div class="contact_box">
+                <h3>Контакти</h3>
+                <p>Телефон: +380961234567</p>
+                <p>м. Київ, вул Берестейська, 31Ф</p>
+            </div>
+
+            <div class="shop_box">
+                <h3>Магазин</h3>
+                <a href="../coffee-product/coffee.html">Кава</a>
+                <a href="../tea-product/tea.html">Чай</a>
+            </div>
+
+            <div class="user_box">
+                <h3>Користувачу</h3>
+                <a href="../login.html">Увійти</a>
+                <a href="../register.html">Реєстрація</a>
+            </div>
+
+            <div class="author"> created by <span>Yuliia Kushnir</span></div>
+
+        </div>
+    </footer>
+
+
+</body>
+</html>

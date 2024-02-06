@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кошик</title>
+    <title>Вхід</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
@@ -50,12 +50,20 @@
     </div>
 
 
-
-
-
-    <main class="cart">
-        <h3>У вашому кошику порожньо... Негайно виправте це!</h3>
+    <main class="login-form">
+        <h2>Вже зареєстровані?</h2>
+        <form action="" method="post" autocomplete="on">
+            <span class="fas fa-user"></span>
+            <input type="email" name="" placeholder="Введіть email" id=""><br>
+            <span class="fas fa-lock"></span>
+            <input type="password" name="" placeholder="Введіть пароль" id=""><br>
+            <input type="submit" value="Вхід" class="btn" id="strangebtn"><br>
+        </form>
+        <h3>Немає власного аккаунта?</h3>
+        <a href="register.html" class="btn">Зареєструватись</a>
     </main>
+
+
 
     <footer class="footer">
         <div class="box_container">
@@ -82,5 +90,6 @@
 
         </div>
     </footer>
+
 </body>
 </html>
