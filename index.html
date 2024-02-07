@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js" defer></script>
     <script src="js/alarm.js" defer></script>
 
@@ -100,7 +101,17 @@
             </div>
         </div>
         
-        <button onclick="setTimeout(myFunction, 30000);">Нагадати через 30 секунд зробити покупку</button>
+        <!-- <button onclick="setTimeout(myFunction, 30000);">Нагадати через 30 секунд зробити покупку</button> -->
+        <br>
+
+        <div class="alarm">
+            <p>Введіть дату та час нагадування</p>
+            <input type="datetime-local" id="alarm-datetime" value="2024-02-07T10:00">
+            <button id="set-alarm">Встановити</button>
+            <button id="cancel-alarm">Скасувати нагадування</button>
+            <p id="alarm-status">Нагадуваннь немає</p>
+        </div>
+
         <br>
         <img src="img/img1.png" alt="Roasted coffee beans" class="img-roast-beans">
     

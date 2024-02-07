@@ -201,6 +201,7 @@ html{
         cursor:pointer;
         border:solid 1px #4d2600;
         margin: 1rem;
+        padding:0.5rem;
 
         &:hover{
             background-color: antiquewhite;        
