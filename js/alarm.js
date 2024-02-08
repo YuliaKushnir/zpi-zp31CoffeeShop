@@ -1,5 +1,5 @@
 let alarms = [];
-var sound = new Audio("/sound/pop1.wav");
+let sound = new Audio("../sound/pop1.wav");
 
 function checkAlarm(){
     let now = new Date();
