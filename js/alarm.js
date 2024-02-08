@@ -1,13 +1,13 @@
 let alarms = [];
-let sound = new Audio("../sound/pop1.wav");
+let sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/computers/pop1.wav");
 
 function checkAlarm(){
     let now = new Date();
     for(let i = 0; i<alarms.length; i++){
         let alarm = alarms[i];
         if(alarm.date.getTime() <= now.getTime()){
-            // sound.onended = function(){ alert("Час робити покупки!"); };
-            alert("Час робити покупки!");
+            sound.onended = function(){ alert("Час робити покупки!"); };
+            // alert("Час робити покупки!");
             sound.play();
             alarms.splice(i, 1);
             updateStatus();
