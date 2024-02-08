@@ -6,7 +6,8 @@ function checkAlarm(){
     for(let i = 0; i<alarms.length; i++){
         let alarm = alarms[i];
         if(alarm.date.getTime() <= now.getTime()){
-            sound.onended = function(){ alert("Час робити покупки!"); };
+            // sound.onended = function(){ alert("Час робити покупки!"); };
+            alert("Час робити покупки!");
             sound.play();
             alarms.splice(i, 1);
             updateStatus();
