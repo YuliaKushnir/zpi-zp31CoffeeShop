@@ -265,6 +265,13 @@ html{
         border-collapse: collapse;
     }
 
+    .list-items{
+        ol{
+            ul{
+                margin-bottom:1rem;
+            }
+        }
+    }
 
     ul {
         list-style-type: circle;
