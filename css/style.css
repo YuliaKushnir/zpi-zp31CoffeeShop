@@ -377,9 +377,6 @@ html{
 }
 
 
-
-
-/* coffee grid====================================================== */
 .coffeeProd, .teaProd {
     display: grid;
     justify-items: center;
@@ -430,11 +427,6 @@ html{
     }
 }
 
-
-
-
-
-/* blog  ========================================== */
 .blog{
     width:80%;
     padding-left:8rem;
@@ -476,9 +468,6 @@ html{
     }    
 }
 
-
-
-/* contact  ========================================== */
 .contact-page{
     display: flex;
     flex-wrap: wrap;
@@ -513,7 +502,6 @@ html{
         height:80%;
     }
 }
-
 
 .login-form, .register-form{
     display:flex;
@@ -579,19 +567,12 @@ html{
     }
 }
 
-
 .cart{
     height: 21rem;
     h3{
         margin:2rem;
     }
 }
-
-
-
-
-
-
 
 
 
@@ -604,22 +585,25 @@ html{
     }
 
     .coffeeProd, .teaProd {
-        grid-template-columns: repeat(2, 1fr);
-        
         .box{
-            width:20rem;
-            height:25rem;
-
+            width:15rem;
+            height:26rem;
+            background-color: white;
+    
             img{
                 width:auto;
-                height:15rem;
+                height:18rem;
             }
+        }
+    
+        .show {
+            display: grid;
         }
     }
 }
 
 
-
+ /* === tablets === */
 @media screen and (max-width:767.98px) {
     * {
         font-size: 0.9rem;
@@ -757,25 +741,98 @@ html{
     }
 
     .coffeeProd, .teaProd {
-        justify-items: center;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    
+        .box{
+            margin-top:0.5rem;
+            margin-bottom:0.5rem;
+    
+            padding:0.3rem;
+        
+            width:18rem;
+            height:25rem;
+    
+            img{
+                height:18rem;
+            }
+            display: none;
+        }
+    
+        .show {
+            display: grid;
+        }
     }
 } 
 
+ /* === mobile === */
+@media screen and (max-width:599.98px) {
+    * {
+        font-size: 0.9rem;
+    }
 
-@media screen and (max-width:450px) {
+    .header{
+        height:3.5rem;    
+    }
+      
+    .topPage{           
+        h1 {
+            font-size:3rem;
+        }
+    
+        h2 {
+            font-size: 1rem;
+        }
+    }
+
     .content{
         display:block;
         flex-wrap: wrap;
-        width:98%;
-        margin-left:0.3rem;
-        
+        width:100%;
+        margin-left:0.2rem;
+
+        #registration_form {
+            width: 95%;
+            input{
+                width:92%;
+            }
+        }
+
         .img-roast-beans, .woman-cofee{
-           width:60%;
+            float:none;
+            margin-left: 0.3rem;
+            width:95%;
+        }
+
+        table{
+            width: 98%;
+            margin: 0rem;
         }
     
         #more{
             display:none;
+        }
+    }
+
+    .coffeeProd, .teaProd {
+        grid-template-columns: repeat(1, 1fr);
+    
+        .box{
+            margin-top:0.5rem;
+            margin-bottom:0.5rem;
+    
+            width:17rem;
+            height:21rem;
+            background-color: white;
+    
+            img{
+                width:auto;
+                height:15rem;
+            }
+            display: none;
+        }
+    
+        .show {
+            display: grid;
         }
     }
 } 
