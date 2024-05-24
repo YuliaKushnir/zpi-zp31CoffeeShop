@@ -503,7 +503,7 @@ html{
     }
 }
 
-.login-form, .register-form{
+.log-form, .register-form{
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -519,7 +519,7 @@ html{
     }
 
     form{
-        width:32rem;
+        width:35rem;
         height:15rem;
         border: 1px solid black;
         border-radius: 5px;
@@ -556,7 +556,7 @@ html{
     }
 }
 
-.login-form{
+.log-form{
     form{
         span{
             padding-top:2rem;

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/script.js" defer></script>
+    <script src="js/forms.js" defer></script>
 
 </head>
 <body>
@@ -54,15 +55,21 @@
 
     <main class="register-form">
         <h2>Реєстрація</h2>
-        <form action="" method="post" autocomplete="on">
+        <form class="login-form">
             <span class="fas fa-user"></span>
             <input type="text" name="" placeholder="Введіть Ім'я" id=""><br>
             <span class="fas fa-envelope"></span>
-            <input type="email" name="" placeholder="Введіть email" id=""><br>
+            <label>
+                Email
+                <input type="email" name="" placeholder="Введіть email" id=""><br>
+            </label>  
             <span class="fas fa-lock"></span>
             <input type="password" name="" placeholder="Введіть пароль" id=""><br>
             <span class="fas fa-lock"></span>
-            <input type="password" name="" placeholder="Підтвердіть пароль" id=""><br>
+            <label>
+                Password
+                <input type="password" name="" placeholder="Підтвердіть пароль" id=""><br>
+            </label>
             <input type="submit" value="Вхід" class="btn" id="strangebtn"><br>
         </form>
 
@@ -70,7 +77,24 @@
         <a href="login.html" class="btn">Увійти</a>
     </main>
 
-
+    <main class="log-form">
+        <h2>Вже зареєстровані?</h2>
+        <form class="login-form">
+            <span class="fas fa-user"></span>
+            <label>
+                Email
+                <input type="email" name="email" placeholder="Введіть e-mail"/>
+            </label>            
+            <span class="fas fa-lock"></span>
+            <label>
+                Password
+                <input type="password" name="password" placeholder="Введіть пароль"/>
+            </label><br>
+            <input type="submit" value="Вхід" class="btn" id="strangebtn"><br>
+        </form>
+        <h3>Немає власного аккаунта?</h3>
+        <a href="register.html" class="btn">Зареєструватись</a>
+    </main>
 
 
 
